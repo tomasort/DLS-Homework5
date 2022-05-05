@@ -1,3 +1,8 @@
 data/
 pytorch-ssd/
 .DS_Store
+VOCdevkit/
+pytorch_resnet_cifar10
+onnx/
+.ipynb_checkpoints/
+
