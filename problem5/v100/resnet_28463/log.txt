@@ -1,0 +1,42 @@
+2022-05-06 05:14:23,900 - INFO - './problem5/v100/resnet_28463' Directory was created!
+2022-05-06 05:14:23,902 - INFO - Starting training on: device=cuda
+
+2022-05-06 05:14:23,902 - INFO - 
+2022-05-06 05:14:23,911 - INFO - Device: b'Tesla V100-SXM2-16GB'
+2022-05-06 05:14:23,911 - INFO - 
+2022-05-06 05:14:23,911 - INFO - Training resnet50
+2022-05-06 05:14:23,911 - INFO - Model information: 
+2022-05-06 05:14:23,913 - INFO - 	Total number of params: 0.76M
+2022-05-06 05:14:23,913 - INFO - 	Total layers 50
+2022-05-06 05:14:23,913 - INFO - Optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.1
+    lr: 0.1
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+)
+2022-05-06 05:14:23,913 - INFO - Scheduler: {'milestones': Counter({100: 1, 150: 1, 200: 1, 300: 1}), 'gamma': 0.1, 'base_lrs': [0.1], 'last_epoch': 0, '_step_count': 1, 'verbose': False, '_get_lr_called_within_step': False, '_last_lr': [0.1]}
+2022-05-06 05:14:27,729 - INFO - Epoch 0/349
+2022-05-06 05:14:27,730 - INFO - ----------
+2022-05-06 05:14:41,497 - INFO - train Loss: 2.4817 Acc: 0.1263
+2022-05-06 05:14:43,723 - INFO - val Loss: 2.0842 Acc: 0.2077
+2022-05-06 05:14:43,735 - INFO - best acc: 0.2077
+2022-05-06 05:14:43,756 - INFO - Best Accuracy Last Updated On Epoch: 0
+2022-05-06 05:14:43,757 - INFO - 
+2022-05-06 05:14:43,757 - INFO - Epoch 1/349
+2022-05-06 05:14:43,757 - INFO - ----------
+2022-05-06 05:14:57,615 - INFO - train Loss: 1.8029 Acc: 0.3113
+2022-05-06 05:14:59,671 - INFO - val Loss: 1.7947 Acc: 0.3676
+2022-05-06 05:14:59,683 - INFO - best acc: 0.3676
+2022-05-06 05:14:59,686 - INFO - 
+2022-05-06 05:14:59,686 - INFO - Epoch 2/349
+2022-05-06 05:14:59,686 - INFO - ----------
+2022-05-06 05:15:13,431 - INFO - train Loss: 1.4228 Acc: 0.4762
+2022-05-06 05:15:15,412 - INFO - val Loss: 1.4081 Acc: 0.4967
+2022-05-06 05:15:15,425 - INFO - best acc: 0.4967
+2022-05-06 05:15:15,427 - INFO - 
+2022-05-06 05:15:15,427 - INFO - Epoch 3/349
+2022-05-06 05:15:15,427 - INFO - ----------
+2022-05-06 05:15:29,738 - INFO - train Loss: 1.1975 Acc: 0.5687
