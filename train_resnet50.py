@@ -9,17 +9,14 @@ import torch.optim as optim
 from resnet import ResNet, BasicBlock, test
 from trainer import train_model
 import argparse
-import nvidia_smi
+import os
 
-nvidia_smi.nvmlInit()
-handle = nvidia_smi.nvmlDeviceGetHandleByIndex(0)
-
-save_path = f"./promblem5/resnet_{nvidia_smi.nvmlDeviceGetName(handle).lower().replace('', '_')}_{int(time.time())%100_000}"
 
 parser = argparse.ArgumentParser(description='Perform transfer learning')
+parser.add_argument('--gpu_name', type=str)
 parser.add_argument('--lr', type=float, default=0.1,
                     help='learning rate. The default is 0.1')
-parser.add_argument('--save', type=str, default=save_path,
+parser.add_argument('--save', type=str, default=f"./promblem5/",
                     help='The directory to save the data from the model')
 parser.add_argument('--batch', type=int, default=128,
                     help='The directory to save the data from the model')
@@ -29,7 +26,7 @@ parser.add_argument('--start-epoch', default=0, type=int,
                     help='manual epoch number (useful on restarts)')
 parser.add_argument('--target-acc', default=0.92, type=float,
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('--dataset', type=str, default='./data'),
+parser.add_argument('--dataset', type=str, default='./data')
 
 args = parser.parse_args()
 
@@ -54,7 +51,7 @@ def resnet50():
 
 net = resnet50()
 test(net)
-
+save_path = os.path.join(args.save, args.gpu_name, f"resnet_{int(time.time())%100_000}")
 dataloaders = {"train": trainloader, "val": testloader}
 model = resnet50()
 params_to_update = model.parameters()
@@ -62,4 +59,4 @@ criterion = nn.CrossEntropyLoss()
 # Observe that all parameters are being optimized
 optimizer = optim.SGD(params_to_update, lr=args.lr, momentum=0.9, weight_decay=1e-4)
 scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[100, 150, 200, 300])
-train_model(model, dataloaders, criterion, optimizer, num_epochs=args.epochs, scheduler=scheduler, save_path=args.save, model_name="resnet50", target_accuracy=0.92)
+train_model(model, dataloaders, criterion, optimizer, num_epochs=args.epochs, scheduler=scheduler, save_path=save_path, model_name="resnet50", target_accuracy=0.92)
