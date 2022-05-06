@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser(description='Perform transfer learning')
 parser.add_argument('--gpu_name', type=str)
 parser.add_argument('--lr', type=float, default=0.1,
                     help='learning rate. The default is 0.1')
-parser.add_argument('--save', type=str, default=f"./promblem5/",
+parser.add_argument('--save', type=str, default=f"./problem5/",
                     help='The directory to save the data from the model')
 parser.add_argument('--batch', type=int, default=128,
                     help='The directory to save the data from the model')

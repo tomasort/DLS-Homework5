@@ -11,4 +11,4 @@ module purge
 source /scratch/tor213/.env/bin/activate
 cd /scratch/tor213/DLS-Homework5/
 
-python train_resnet50.py --dataset /scratch/tor213/data --gpu-name v100
+python train_resnet50.py --dataset /scratch/tor213/data --gpu_name v100
