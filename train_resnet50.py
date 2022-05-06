@@ -14,10 +14,12 @@ import nvidia_smi
 nvidia_smi.nvmlInit()
 handle = nvidia_smi.nvmlDeviceGetHandleByIndex(0)
 
+save_path = f"./promblem5/resnet_{nvidia_smi.nvmlDeviceGetName(handle).lower().replace('', '_')}_{int(time.time())%100_000}"
+
 parser = argparse.ArgumentParser(description='Perform transfer learning')
 parser.add_argument('--lr', type=float, default=0.1,
                     help='learning rate. The default is 0.1')
-parser.add_argument('--save', type=str, default=f"./promblem5/resnet_{nvidia_smi.nvmlDeviceGetName(handle).lower().replace('', '_')}_{int(time.time())%100_000}",
+parser.add_argument('--save', type=str, default=save_path,
                     help='The directory to save the data from the model')
 parser.add_argument('--batch', type=int, default=128,
                     help='The directory to save the data from the model')
