@@ -6,3 +6,4 @@ pytorch_resnet_cifar10
 onnx/
 .ipynb_checkpoints/
 *__pycache__/
+open_images/
