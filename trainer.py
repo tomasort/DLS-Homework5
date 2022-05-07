@@ -172,7 +172,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=200, schedu
                 if show_iteration_info: 
                     logging.info(report)
 
-                if epoch == 5:  # Capture information on 50th epoch
+                if epoch == 5:  # Capture information on 5th epoch
                     get_gpu_metrics = True
                     gpu_metric_start_time = time.time() 
                 if get_gpu_metrics and time.time()-gpu_metric_start_time >= 60 * 3:
