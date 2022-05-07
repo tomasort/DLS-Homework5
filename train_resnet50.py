@@ -59,4 +59,4 @@ criterion = nn.CrossEntropyLoss()
 # Observe that all parameters are being optimized
 optimizer = optim.SGD(params_to_update, lr=args.lr, momentum=0.9, weight_decay=1e-4)
 scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[100, 150, 200, 300])
-train_model(model, dataloaders, criterion, optimizer, num_epochs=args.epochs, scheduler=scheduler, save_path=save_path, model_name="resnet50", target_accuracy=0.92)
+train_model(model, dataloaders, criterion, optimizer, num_epochs=args.epochs, scheduler=scheduler, save_path=save_path, model_name=f"resnet50_{args.batch}", target_accuracy=0.92)
