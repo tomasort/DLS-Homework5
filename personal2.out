@@ -1,0 +1,169 @@
+Found existing installation: torch 1.10.2
+Uninstalling torch-1.10.2:
+  Would remove:
+    /scratch/tor213/.env/bin/convert-caffe2-to-onnx
+    /scratch/tor213/.env/bin/convert-onnx-to-caffe2
+    /scratch/tor213/.env/bin/torchrun
+    /scratch/tor213/.env/lib64/python3.8/site-packages/caffe2/*
+    /scratch/tor213/.env/lib64/python3.8/site-packages/torch-1.10.2.dist-info/*
+    /scratch/tor213/.env/lib64/python3.8/site-packages/torch/*
+Proceed (Y/n)? ERROR: Exception:
+Traceback (most recent call last):
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 167, in exc_logging_wrapper
+    status = run_func(*args)
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/commands/uninstall.py", line 97, in run
+    uninstall_pathset = req.uninstall(
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/req/req_install.py", line 638, in uninstall
+    uninstalled_pathset.remove(auto_confirm, verbose)
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/req/req_uninstall.py", line 363, in remove
+    if auto_confirm or self._allowed_to_proceed(verbose):
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/req/req_uninstall.py", line 403, in _allowed_to_proceed
+    return ask("Proceed (Y/n)? ", ("y", "n", "")) != "n"
+  File "/scratch/tor213/.env/lib/python3.8/site-packages/pip/_internal/utils/misc.py", line 186, in ask
+    response = input(message)
+EOFError: EOF when reading a line
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Collecting torch==1.9.0
+  Downloading torch-1.9.0-cp38-cp38-manylinux1_x86_64.whl (831.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.4/831.4 MB 261.9 MB/s eta 0:00:00
+Collecting torchvision==0.10.0
+  Downloading torchvision-0.10.0-cp38-cp38-manylinux1_x86_64.whl (22.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.1/22.1 MB 309.5 MB/s eta 0:00:00
+Collecting torchaudio==0.9.0
+  Downloading torchaudio-0.9.0-cp38-cp38-manylinux1_x86_64.whl (1.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 301.3 MB/s eta 0:00:00
+Collecting torchtext==0.10.0
+  Downloading torchtext-0.10.0-cp38-cp38-manylinux1_x86_64.whl (7.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 354.1 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions in /scratch/tor213/.env/lib/python3.8/site-packages (from torch==1.9.0) (4.1.1)
+Requirement already satisfied: numpy in /scratch/tor213/.env/lib64/python3.8/site-packages (from torchvision==0.10.0) (1.22.2)
+Requirement already satisfied: pillow>=5.3.0 in /scratch/tor213/.env/lib64/python3.8/site-packages (from torchvision==0.10.0) (9.0.1)
+Requirement already satisfied: tqdm in /scratch/tor213/.env/lib/python3.8/site-packages (from torchtext==0.10.0) (4.63.1)
+Requirement already satisfied: requests in /scratch/tor213/.env/lib/python3.8/site-packages (from torchtext==0.10.0) (2.27.1)
+Requirement already satisfied: certifi>=2017.4.17 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->torchtext==0.10.0) (2021.10.8)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->torchtext==0.10.0) (1.26.8)
+Requirement already satisfied: idna<4,>=2.5 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->torchtext==0.10.0) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->torchtext==0.10.0) (2.0.12)
+Installing collected packages: torch, torchvision, torchtext, torchaudio
+  Attempting uninstall: torch
+    Found existing installation: torch 1.10.2
+    Uninstalling torch-1.10.2:
+      Successfully uninstalled torch-1.10.2
+  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.11.3
+    Uninstalling torchvision-0.11.3:
+      Successfully uninstalled torchvision-0.11.3
+Successfully installed torch-1.9.0 torchaudio-0.9.0 torchtext-0.10.0 torchvision-0.10.0
+WARNING: Skipping transformers as it is not installed.
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Collecting transformers==4.8.0
+  Downloading transformers-4.8.0-py3-none-any.whl (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 93.4 MB/s eta 0:00:00
+Requirement already satisfied: tqdm>=4.27 in /scratch/tor213/.env/lib/python3.8/site-packages (from transformers==4.8.0) (4.63.1)
+Collecting filelock
+  Downloading filelock-3.6.0-py3-none-any.whl (10.0 kB)
+Collecting tokenizers<0.11,>=0.10.1
+  Downloading tokenizers-0.10.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (3.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 105.7 MB/s eta 0:00:00
+Requirement already satisfied: requests in /scratch/tor213/.env/lib/python3.8/site-packages (from transformers==4.8.0) (2.27.1)
+Requirement already satisfied: numpy>=1.17 in /scratch/tor213/.env/lib64/python3.8/site-packages (from transformers==4.8.0) (1.22.2)
+Requirement already satisfied: packaging in /scratch/tor213/.env/lib/python3.8/site-packages (from transformers==4.8.0) (21.3)
+Collecting huggingface-hub==0.0.12
+  Downloading huggingface_hub-0.0.12-py3-none-any.whl (37 kB)
+Requirement already satisfied: pyyaml in /scratch/tor213/.env/lib64/python3.8/site-packages (from transformers==4.8.0) (6.0)
+Collecting regex!=2019.12.17
+  Downloading regex-2022.4.24-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 764.9/764.9 KB 276.9 MB/s eta 0:00:00
+Collecting sacremoses
+  Downloading sacremoses-0.0.53.tar.gz (880 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 880.6/880.6 KB 101.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: typing-extensions in /scratch/tor213/.env/lib/python3.8/site-packages (from huggingface-hub==0.0.12->transformers==4.8.0) (4.1.1)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /scratch/tor213/.env/lib/python3.8/site-packages (from packaging->transformers==4.8.0) (3.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->transformers==4.8.0) (2021.10.8)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->transformers==4.8.0) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->transformers==4.8.0) (3.3)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /scratch/tor213/.env/lib/python3.8/site-packages (from requests->transformers==4.8.0) (1.26.8)
+Requirement already satisfied: six in /scratch/tor213/.env/lib/python3.8/site-packages (from sacremoses->transformers==4.8.0) (1.16.0)
+Collecting click
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 KB 327.5 MB/s eta 0:00:00
+Requirement already satisfied: joblib in /scratch/tor213/.env/lib/python3.8/site-packages (from sacremoses->transformers==4.8.0) (1.1.0)
+Building wheels for collected packages: sacremoses
+  Building wheel for sacremoses (setup.py): started
+  Building wheel for sacremoses (setup.py): finished with status 'done'
+  Created wheel for sacremoses: filename=sacremoses-0.0.53-py3-none-any.whl size=895260 sha256=d09ae1d4542cc8ccab3d1380c9bda97fb9f3e9254b2b4e3c7144db4b96c2cea6
+  Stored in directory: /state/partition1/job-19274255/pip-ephem-wheel-cache-g3k_ufgk/wheels/82/ab/9b/c15899bf659ba74f623ac776e861cf2eb8608c1825ddec66a4
+Successfully built sacremoses
+Installing collected packages: tokenizers, regex, filelock, click, sacremoses, huggingface-hub, transformers
+Successfully installed click-8.1.3 filelock-3.6.0 huggingface-hub-0.0.12 regex-2022.4.24 sacremoses-0.0.53 tokenizers-0.10.3 transformers-4.8.0
+2022-05-08 21:37:12,266 - root - INFO - Use Cuda.
+2022-05-08 21:37:12,266 - root - INFO - Namespace(balance_data=False, base_net=None, base_net_lr=0.001, batch_size=1024, checkpoint_folder='ssd_personal/models', dataset_type='open_images', datasets=['open_images'], debug_steps=100, extra_layers_lr=None, freeze_base_net=False, freeze_net=False, gamma=0.1, lr=0.05, mb2_width_mult=1.0, milestones='80,100', momentum=0.9, net='mb1-ssd', num_epochs=200, num_workers=4, pretrained_ssd='models/mobilenet-v1-ssd-mp-0_675.pth', resume=None, scheduler='cosine', t_max=100.0, use_cuda=True, validation_dataset=None, validation_epochs=5, weight_decay=0.0005)
+2022-05-08 21:37:12,267 - root - INFO - Prepare training datasets.
+2022-05-08 21:39:39,742 - root - INFO - Dataset Summary:Number of Images: 376564
+Minimum Number of Images for a Class: -1
+Label Distribution:
+	Airplane: 21285
+	Bicycle: 40161
+	Boy: 87555
+	Car: 248075
+	Dog: 28675
+	Girl: 197155
+	Helicopter: 3023
+	Human body: 175244
+	Umbrella: 7204
+	Van: 7720
+	Vehicle: 50959
+	Window: 503467
+2022-05-08 21:39:40,204 - root - INFO - Stored labels into file ssd_personal/models/open-images-model-labels.txt.
+2022-05-08 21:39:40,204 - root - INFO - Train dataset size: 376564
+2022-05-08 21:39:40,205 - root - INFO - Prepare Validation datasets.
+2022-05-08 21:39:55,255 - root - INFO - Dataset Summary:Number of Images: 39064
+Minimum Number of Images for a Class: -1
+Label Distribution:
+	Airplane: 3272
+	Bicycle: 1158
+	Boy: 2031
+	Car: 28737
+	Dog: 5818
+	Girl: 7479
+	Helicopter: 424
+	Human body: 20246
+	Umbrella: 97
+	Van: 500
+	Vehicle: 7064
+	Window: 5091
+2022-05-08 21:39:55,290 - root - INFO - validation dataset size: 39064
+2022-05-08 21:39:55,291 - root - INFO - Build network.
+2022-05-08 21:39:55,351 - root - INFO - Init from pretrained ssd models/mobilenet-v1-ssd-mp-0_675.pth
+2022-05-08 21:39:55,491 - root - INFO - Took 0.14 seconds to load the model.
+2022-05-08 21:40:04,650 - root - INFO - Learning rate: 0.05, Base net learning rate: 0.001, Extra Layers learning rate: 0.05.
+2022-05-08 21:40:04,651 - root - INFO - Uses CosineAnnealingLR scheduler.
+2022-05-08 21:40:04,651 - root - INFO - Start training from epoch 0.
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+Traceback (most recent call last):
+  File "pytorch-ssd/train_ssd.py", line 325, in <module>
+    train(train_loader, net, criterion, optimizer,
+  File "pytorch-ssd/train_ssd.py", line 123, in train
+    confidence, locations = net(images)
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/tor213/DLS-Homework5/pytorch-ssd/vision/ssd/ssd.py", line 58, in forward
+    x = layer(x)
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 167, in forward
+    return F.batch_norm(
+  File "/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/functional.py", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 2.75 GiB (GPU 0; 31.75 GiB total capacity; 28.60 GiB already allocated; 857.50 MiB free; 29.60 GiB reserved in total by PyTorch)

@@ -1,0 +1,85 @@
+2022-05-08 21:44:42,072 - root - INFO - Use Cuda.
+2022-05-08 21:44:42,072 - root - INFO - Namespace(balance_data=False, base_net=None, base_net_lr=0.001, batch_size=256, checkpoint_folder='models', dataset_type='open_images', datasets=['open_images'], debug_steps=100, extra_layers_lr=None, freeze_base_net=False, freeze_net=False, gamma=0.1, lr=0.01, mb2_width_mult=1.0, milestones='80,100', momentum=0.9, net='mb1-ssd', num_epochs=100, num_workers=4, pretrained_ssd='models/mobilenet-v1-ssd-mp-0_675.pth', resume=None, scheduler='cosine', t_max=100.0, use_cuda=True, validation_dataset=None, validation_epochs=5, weight_decay=0.0005)
+2022-05-08 21:44:42,074 - root - INFO - Prepare training datasets.
+2022-05-08 21:47:15,723 - root - INFO - Dataset Summary:Number of Images: 376564
+Minimum Number of Images for a Class: -1
+Label Distribution:
+	Airplane: 21285
+	Bicycle: 40161
+	Boy: 87555
+	Car: 248075
+	Dog: 28675
+	Girl: 197155
+	Helicopter: 3023
+	Human body: 175244
+	Umbrella: 7204
+	Van: 7720
+	Vehicle: 50959
+	Window: 503467
+2022-05-08 21:47:16,213 - root - INFO - Stored labels into file models/open-images-model-labels.txt.
+2022-05-08 21:47:16,213 - root - INFO - Train dataset size: 376564
+2022-05-08 21:47:16,228 - root - INFO - Prepare Validation datasets.
+2022-05-08 21:47:32,005 - root - INFO - Dataset Summary:Number of Images: 39064
+Minimum Number of Images for a Class: -1
+Label Distribution:
+	Airplane: 3272
+	Bicycle: 1158
+	Boy: 2031
+	Car: 28737
+	Dog: 5818
+	Girl: 7479
+	Helicopter: 424
+	Human body: 20246
+	Umbrella: 97
+	Van: 500
+	Vehicle: 7064
+	Window: 5091
+2022-05-08 21:47:32,044 - root - INFO - validation dataset size: 39064
+2022-05-08 21:47:32,044 - root - INFO - Build network.
+2022-05-08 21:47:32,103 - root - INFO - Init from pretrained ssd models/mobilenet-v1-ssd-mp-0_675.pth
+2022-05-08 21:47:32,262 - root - INFO - Took 0.16 seconds to load the model.
+2022-05-08 21:47:40,659 - root - INFO - Learning rate: 0.01, Base net learning rate: 0.001, Extra Layers learning rate: 0.01.
+2022-05-08 21:47:40,659 - root - INFO - Uses CosineAnnealingLR scheduler.
+2022-05-08 21:47:40,659 - root - INFO - Start training from epoch 0.
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+2022-05-08 22:03:20,827 - root - INFO - Epoch: 0, Step: 100, Average Loss: 6.9161, Average Regression Loss 2.4513, Average Classification Loss: 4.4648
+2022-05-08 22:18:21,583 - root - INFO - Epoch: 0, Step: 200, Average Loss: 5.0236, Average Regression Loss 1.7739, Average Classification Loss: 3.2498
+2022-05-08 22:33:22,656 - root - INFO - Epoch: 0, Step: 300, Average Loss: 4.7688, Average Regression Loss 1.6804, Average Classification Loss: 3.0884
+2022-05-08 22:48:19,286 - root - INFO - Epoch: 0, Step: 400, Average Loss: 4.6100, Average Regression Loss 1.6010, Average Classification Loss: 3.0091
+2022-05-08 23:03:26,504 - root - INFO - Epoch: 0, Step: 500, Average Loss: 4.5599, Average Regression Loss 1.5805, Average Classification Loss: 2.9794
+2022-05-08 23:18:46,960 - root - INFO - Epoch: 0, Step: 600, Average Loss: 4.4839, Average Regression Loss 1.5517, Average Classification Loss: 2.9322
+2022-05-08 23:33:50,986 - root - INFO - Epoch: 0, Step: 700, Average Loss: 4.4681, Average Regression Loss 1.5371, Average Classification Loss: 2.9309
+2022-05-08 23:48:55,938 - root - INFO - Epoch: 0, Step: 800, Average Loss: 4.4251, Average Regression Loss 1.5283, Average Classification Loss: 2.8968
+2022-05-09 00:03:58,526 - root - INFO - Epoch: 0, Step: 900, Average Loss: 4.3655, Average Regression Loss 1.4914, Average Classification Loss: 2.8741
+2022-05-09 00:19:06,306 - root - INFO - Epoch: 0, Step: 1000, Average Loss: 4.3487, Average Regression Loss 1.4834, Average Classification Loss: 2.8654
+2022-05-09 00:34:29,568 - root - INFO - Epoch: 0, Step: 1100, Average Loss: 4.3448, Average Regression Loss 1.4882, Average Classification Loss: 2.8565
+2022-05-09 00:49:47,045 - root - INFO - Epoch: 0, Step: 1200, Average Loss: 4.3430, Average Regression Loss 1.4904, Average Classification Loss: 2.8526
+2022-05-09 01:05:00,077 - root - INFO - Epoch: 0, Step: 1300, Average Loss: 4.3046, Average Regression Loss 1.4665, Average Classification Loss: 2.8381
+2022-05-09 01:19:55,876 - root - INFO - Epoch: 0, Step: 1400, Average Loss: 4.2816, Average Regression Loss 1.4618, Average Classification Loss: 2.8198
+/scratch/tor213/DLS-Homework5/pytorch-ssd/vision/transforms/transforms.py:247: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  mode = random.choice(self.sample_options)
+/scratch/tor213/DLS-Homework5/pytorch-ssd/vision/transforms/transforms.py:247: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  mode = random.choice(self.sample_options)
+/scratch/tor213/DLS-Homework5/pytorch-ssd/vision/transforms/transforms.py:247: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  mode = random.choice(self.sample_options)
+/scratch/tor213/DLS-Homework5/pytorch-ssd/vision/transforms/transforms.py:247: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  mode = random.choice(self.sample_options)
+/scratch/tor213/.env/lib64/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+2022-05-09 01:37:22,582 - root - INFO - Epoch: 0, Validation Loss: 3.4272, Validation Regression Loss 0.9510, Validation Classification Loss: 2.4762
+2022-05-09 01:37:23,027 - root - INFO - Saved model models/mb1-ssd-Epoch-0-Loss-3.427180151534236.pth
+2022-05-09 01:52:55,665 - root - INFO - Epoch: 1, Step: 100, Average Loss: 4.3020, Average Regression Loss 1.4616, Average Classification Loss: 2.8404
+2022-05-09 02:08:15,423 - root - INFO - Epoch: 1, Step: 200, Average Loss: 4.2411, Average Regression Loss 1.4397, Average Classification Loss: 2.8015
+2022-05-09 02:23:20,872 - root - INFO - Epoch: 1, Step: 300, Average Loss: 4.2718, Average Regression Loss 1.4559, Average Classification Loss: 2.8159
+2022-05-09 02:38:18,758 - root - INFO - Epoch: 1, Step: 400, Average Loss: 4.2238, Average Regression Loss 1.4372, Average Classification Loss: 2.7867
+2022-05-09 02:53:20,140 - root - INFO - Epoch: 1, Step: 500, Average Loss: 4.2201, Average Regression Loss 1.4302, Average Classification Loss: 2.7899
+2022-05-09 03:08:25,906 - root - INFO - Epoch: 1, Step: 600, Average Loss: 4.1883, Average Regression Loss 1.4167, Average Classification Loss: 2.7716
+2022-05-09 03:23:24,612 - root - INFO - Epoch: 1, Step: 700, Average Loss: 4.2058, Average Regression Loss 1.4427, Average Classification Loss: 2.7630
+2022-05-09 03:38:27,727 - root - INFO - Epoch: 1, Step: 800, Average Loss: 4.1646, Average Regression Loss 1.4066, Average Classification Loss: 2.7580
+2022-05-09 03:53:18,011 - root - INFO - Epoch: 1, Step: 900, Average Loss: 4.1657, Average Regression Loss 1.4079, Average Classification Loss: 2.7579
+slurmstepd: error: *** JOB 19274288 ON gv003 CANCELLED AT 2022-05-09T04:01:16 ***

@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --output=%x.out
 #SBATCH --mem=32GB
-#SBATCH --time=8:00:00
-#SBATCH --gres=gpu:v100:1
+#SBATCH --time=12:00:00
+#SBATCH --gres=gpu
 
 module purge
 source /scratch/tor213/.env/bin/activate
